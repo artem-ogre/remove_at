@@ -25,13 +25,14 @@ inline ForwardIt remove_at(
 ``` 
 Remove elements in the range `[first; last)` with indices from the sorted range `[indices_fist, indices_last)`.
  
+### Parameters
  |  Parameters | Description |
  | ------------- | ------------- |
  |**`first`**, **`last`** | the range of elements to process |
  |**`index`** | index of element to remove from the range `[first; last)` |
  |**`indices_fist`**, **`indices_last`** | the range of sorted element indices to remove from the range `[first; last)` |
  
- ### Type requirements and preconditions
+### Type requirements and preconditions
 - `ForwardIt` must meet the requirements of [`ForwardIterator`](http://en.cppreference.com/w/cpp/concept/ForwardIterator).
 - The type of dereferenced `ForwardIt` must meet the requirements of [`CopyAssignable`](http://en.cppreference.com/w/cpp/concept/CopyAssignable). 
 - Indices in the range `[indices_fist, indices_last)` should be sorted in the ascending order
