@@ -7,6 +7,12 @@ C++ standard library `<algorithm>` provides functions: [`std::remove` and `std::
 Often is is desired to **remove multiple elements from a vector based on a selection**, where selection is a **collection of element indices**. Function **`remove_at`** serves this purpose.
 
 ## remove_at
+**(1)**
+```c++
+template <typename ForwardIt>
+inline ForwardIt remove_at(ForwardIt first, ForwardIt last, const size_t index)
+``` 
+**(2)**  
 ```c++
 template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
@@ -16,11 +22,13 @@ inline ForwardIt remove_at(
     SortedIndicesForwardIt indices_last);
 ``` 
 
- Removes the elements in the range `[first; last)` with indices from the sorted range `[indices_fist, indices_last)`.
+1) Remove one element with given index from the range `[first; last)`
+2) Remove elements in the range `[first; last)` with indices from the sorted range `[indices_fist, indices_last)`.
  
  |  Parameters | Description |
  | ------------- | ------------- |
  |**`first`**, **`last`** | the range of elements to process |
+ |**`index`** | index of element to remove from the range `[first; last)` |
  |**`indices_fist`**, **`indices_last`** | the range of sorted element indices to remove from the range `[first; last)` |
  
  ### Type requirements and preconditions
