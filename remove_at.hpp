@@ -5,7 +5,7 @@
 #include <vector>
 
 /*!
- * Removes the elements in the range [first; last) with indices from the sorted
+ * Remove elements in the range [first; last) with indices from the sorted
  * range [indices_fist, indices_last)
  */
 template <typename ForwardIt, typename SortedIndicesForwardIt>
