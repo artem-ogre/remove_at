@@ -4,6 +4,16 @@
 #include <iterator>
 #include <vector>
 
+//! Remove one element with given index from the range [first; last)
+template <typename ForwardIt>
+inline ForwardIt remove_at(ForwardIt first, ForwardIt last, const size_t index)
+{
+    std::advance(first, index);
+    for(ForwardIt it = first + 1; it != last; ++it, ++first)
+        *first = *it;
+    return first;
+}
+
 /*!
  * Remove elements in the range [first; last) with indices from the sorted
  * range [indices_fist, indices_last)
