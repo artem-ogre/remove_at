@@ -73,7 +73,7 @@ inline ForwardIt remove_at(
 
 ### Example
 
-The following code removes elements at indices (6,3,1) from a `std::vector<int>` by shifting all non-selected elements to the left and then erasing the extra. This is an example of erase-remove idiom.
+The following code removes elements at indices `[6,3,1]` from a `std::vector<int>` by shifting all non-selected elements to the left and then erasing the extra. This is an example of erase-remove idiom.
 ```c++
 #include "remove_at.hpp"
 #include <algorithm>
