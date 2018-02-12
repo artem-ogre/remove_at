@@ -18,7 +18,7 @@ inline ForwardIt remove_at(
 
  Removes the elements in the range `[first; last)` with indices from the sorted range `[indices_fist, indices_last)`.
  
- |  Parameters | |
+ |  Parameters | Description |
  | ------------- | ------------- |
  |**`first`**, **`last`** | the range of elements to process |
  |**`indices_fist`**, **`indices_last`** | the range of sorted element indices to remove from the range `[first; last)` |
