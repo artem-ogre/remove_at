@@ -8,7 +8,7 @@ Often is is desired to **remove multiple elements from a vector based on a selec
 
 ## remove_at
 ```c++
-template <class ForwardIt, class SortedIndicesForwardIt>
+template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
     ForwardIt last,
@@ -43,7 +43,7 @@ If the algorithm fails to allocate memory, `std::bad_alloc` is thrown.
 ### Implementation
 
 ```c++
-template <class ForwardIt, class SortedIndicesForwardIt>
+template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
     ForwardIt last,
