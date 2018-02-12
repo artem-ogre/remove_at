@@ -23,24 +23,24 @@ inline ForwardIt remove_at(
  |**`first`**, **`last`** | the range of elements to process |
  |**`indices_fist`**, **`indices_last`** | the range of sorted element indices to remove from the range `[first; last)` |
  
- **Type requirements and preconditions**
+ ### Type requirements and preconditions
 - `ForwardIt` must meet the requirements of [`ForwardIterator`](http://en.cppreference.com/w/cpp/concept/ForwardIterator).
 - The type of dereferenced `ForwardIt` must meet the requirements of [`CopyAssignable`](http://en.cppreference.com/w/cpp/concept/CopyAssignable). 
 - Indices in the range `[indices_fist, indices_last)` should be sorted in the ascending order
 
-**Return value**
+### Return value
 
 Past-the-end iterator for the new range of values (if this is not end, then it points to an unspecified value, and so do iterators to any values between this iterator and end) 
 
-**Complexity**
+### Complexity
 
 Linear: O(n). 
 
-**Exceptions**
+### Exceptions
 
 If the algorithm fails to allocate memory, std::bad_alloc is thrown. 
 
-**Implementation**
+### Implementation
 
 ```c++
 template <class ForwardIt, class SortedIndicesForwardIt>
@@ -71,7 +71,7 @@ inline ForwardIt remove_at(
 }
 ```
 
-**Example**
+### Example
 
 The following code removes elements at indices (6,3,1) from a `std::vector<int>` by shifting all non-selected elements to the left and then erasing the extra. This is an example of erase-remove idiom.
 ```c++
