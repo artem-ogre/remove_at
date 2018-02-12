@@ -8,7 +8,7 @@
  * Removes the elements in the range [first; last) with indices from the sorted
  * range [indices_fist, indices_last)
  */
-template <class ForwardIt, class SortedIndicesForwardIt>
+template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
     ForwardIt last,
