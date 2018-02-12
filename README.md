@@ -103,10 +103,19 @@ int main()
     std::cout << std::endl;
     for(size_t i = 0; i < vec.size(); i++)
         std::cout << " " << vec[i];
+        
+    vec.erase(
+        remove_at(vec.begin(), vec.end(), 6),
+        vec.end());
+
+    std::cout << std::endl;
+    for(size_t i = 0; i < vec.size(); i++)
+        std::cout << " " << vec[i];
 }
 ```
 Output:
 ```
  0 1 2 3 4 5 6 7 8 9
  0 2 4 5 7 8 9
+ 0 2 4 5 7 8
 ```
