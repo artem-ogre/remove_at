@@ -2,7 +2,7 @@
 Remove multiple elements at given indices
 
 ## Overview
-C++ standard library `<algorithm>` provides functions: [`std::remove` and `std::remove_if`](http://en.cppreference.com/w/cpp/algorithm/remove). This functions provide convenient and performant way to remove elements from `std::vector` using [erase-remove idiom](https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom). However only removing elements by value or by a predicate is possible.
+C++ standard library `<algorithm>` provides functions: [`std::remove` and `std::remove_if`](http://en.cppreference.com/w/cpp/algorithm/remove). These functions provide convenient and performant way to remove elements from `std::vector` using [erase-remove idiom](https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom). However only removing elements by value or by a predicate is possible.
 
 Often is is desired to **remove multiple elements from a vector based on a selection**, where selection is a **collection of element indices**. Function **`remove_at`** serves this purpose.
 
