@@ -59,7 +59,8 @@ inline ForwardIt remove_at(ForwardIt first, ForwardIt last, const size_t index)
         *first = *it;
     return first;
 }
-
+```
+```c++
 template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
