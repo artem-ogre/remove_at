@@ -38,7 +38,7 @@ Linear: O(n).
 
 ### Exceptions
 
-If the algorithm fails to allocate memory, std::bad_alloc is thrown. 
+If the algorithm fails to allocate memory, `std::bad_alloc` is thrown. 
 
 ### Implementation
 
