@@ -51,6 +51,15 @@ If the algorithm fails to allocate memory, `std::bad_alloc` is thrown.
 ### Implementation
 
 ```c++
+template <typename ForwardIt>
+inline ForwardIt remove_at(ForwardIt first, ForwardIt last, const size_t index)
+{
+    std::advance(first, index);
+    for(ForwardIt it = first + 1; it != last; ++it, ++first)
+        *first = *it;
+    return first;
+}
+
 template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
