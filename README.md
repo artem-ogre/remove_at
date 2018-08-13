@@ -66,26 +66,20 @@ template <typename ForwardIt, typename SortedIndicesForwardIt>
 inline ForwardIt remove_at(
     ForwardIt first,
     ForwardIt last,
-    SortedIndicesForwardIt indices_fist,
+    SortedIndicesForwardIt indices_first,
     SortedIndicesForwardIt indices_last)
 {
-    typedef typename std::vector<bool> Flags;
+    typedef typename std::vector<bool> flags;
     // flag elements to keep
-    Flags is_keep(
-        static_cast<Flags::size_type>(std::distance(first, last)), true);
-    for(; indices_fist != indices_last; ++indices_fist)
-        is_keep[static_cast<Flags::size_type>(*indices_fist)] = false;
+    flags is_keep(
+        static_cast<flags::size_type>(std::distance(first, last)), true);
+    for(; indices_first != indices_last; ++indices_first)
+        is_keep[static_cast<flags::size_type>(*indices_first)] = false;
     // move kept elements to beginning
     ForwardIt result = first;
-    for(Flags::const_iterator keepIt = is_keep.begin(); first != last;
-        ++first, ++keepIt)
-    {
-        if(*keepIt)
-        {
-            *result = *first;
-            result++;
-        }
-    }
+    for(flags::const_iterator it = is_keep.begin(); first != last; ++first, ++it)
+        if(*it) // keep element
+            *result++ = *first; //in c++11 and later use: *result++ = std::move(*first);
     return result;
 }
 ```
