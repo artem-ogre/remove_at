@@ -1,6 +1,7 @@
 #ifndef REMOVE_AT_HPP
 #define REMOVE_AT_HPP
 
+#include <algorithm>
 #include <iterator>
 
 /*!
